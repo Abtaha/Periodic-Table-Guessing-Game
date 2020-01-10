@@ -1,0 +1,22 @@
+# SzmapEnergies interface file
+
+!BRIEF SzmapEnergies.py [-p] <molfile> [-l] <molfile>
+
+!PARAMETER -p
+  !TYPE string
+  !BRIEF Input protein (or other) context mol
+  !REQUIRED true
+  !KEYLESS 1
+!END
+!PARAMETER -l
+  !TYPE string
+  !BRIEF Input ligand coordinates for calculations
+  !REQUIRED true
+  !KEYLESS 2
+!END
+!PARAMETER -high_res
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, increase the number of rotations to 360
+  !REQUIRED false
+!END

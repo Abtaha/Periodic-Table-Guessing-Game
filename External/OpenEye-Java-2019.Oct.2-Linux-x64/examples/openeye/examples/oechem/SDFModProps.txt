@@ -1,0 +1,31 @@
+!BRIEF [-remove] <prop1 prop2...> [-keep] <prop1 prop2...> [-clearAll] -i <input> -o <output>
+!PARAMETER -i
+  !ALIAS -in
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input file name
+!END
+!PARAMETER -o
+  !ALIAS -out
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Output file name
+!END
+!PARAMETER -keep
+  !ALIAS -k
+  !TYPE string
+  !LIST true
+  !BRIEF SD tags to be kept
+!END
+!PARAMETER -remove
+  !ALIAS -r
+  !TYPE string
+  !LIST true
+  !BRIEF SD tags to be removed
+!END
+!PARAMETER -clearAll
+  !ALIAS -c
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Removes all SD tags
+!END

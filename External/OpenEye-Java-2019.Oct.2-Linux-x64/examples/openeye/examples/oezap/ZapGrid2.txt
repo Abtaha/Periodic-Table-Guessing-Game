@@ -1,0 +1,39 @@
+!PARAMETER -in
+  !TYPE string
+  !BRIEF Input molecule file
+  !REQUIRED true
+!END
+!PARAMETER -out
+  !TYPE string
+  !BRIEF Output grid file
+  !REQUIRED true
+!END
+!PARAMETER -epsin
+  !TYPE float
+  !BRIEF Inner dielectric
+  !DEFAULT 1.0
+  !LEGAL_RANGE 0.0 100.0
+!END
+!PARAMETER -epsout
+  !TYPE float
+  !BRIEF Outer dielectric
+  !DEFAULT 80.0
+  !LEGAL_RANGE 0.0 100.0
+!END
+!PARAMETER -grid_spacing
+  !TYPE float
+  !DEFAULT 0.5
+  !BRIEF Spacing between grid points (Angstroms)
+  !LEGAL_RANGE 0.1 2.0
+!END
+!PARAMETER -buffer
+  !TYPE float
+  !DEFAULT 2.0
+  !BRIEF Extra buffer outside extents of molecule.
+  !LEGAL_RANGE 0.1 10.0
+!END
+!PARAMETER -mask
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Mask potential grid by the molecule
+!END

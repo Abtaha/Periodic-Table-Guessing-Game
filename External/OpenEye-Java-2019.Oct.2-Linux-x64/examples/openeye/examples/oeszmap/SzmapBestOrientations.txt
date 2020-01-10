@@ -1,0 +1,28 @@
+# SzmapBestOrientations interface file
+
+!BRIEF SzmapBestOrientations.py [-prob #.#] [-p] <molfile> [-l] <molfile> [-o] <molfile>
+
+!PARAMETER -p
+  !TYPE string
+  !BRIEF Input protein (or other) context mol
+  !REQUIRED true
+  !KEYLESS 1
+!END
+!PARAMETER -l
+  !TYPE string
+  !BRIEF Input ligand coordinates for calculations
+  !REQUIRED true
+  !KEYLESS 2
+!END
+!PARAMETER -o
+  !TYPE string
+  !BRIEF Output file for points and probes molecules
+  !REQUIRED true
+  !KEYLESS 3
+!END
+!PARAMETER -prob
+  !TYPE double
+  !DEFAULT 0.5
+  !BRIEF Cutoff for cumulative probability of probes
+  !REQUIRED false
+!END

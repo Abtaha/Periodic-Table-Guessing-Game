@@ -1,0 +1,31 @@
+!BRIEF [-nHist] [-cutoff] [-tversky] [-dbase] <database> [-query] <query ...>
+!CATEGORY BestShapeOverlayMultiConfQuery
+!PARAMETER -nHits
+  !TYPE int
+  !DEFAULT 100
+  !BRIEF Number of hits to return
+!END
+!PARAMETER -cutoff
+  !TYPE float
+  !DEFAULT -1
+  !BRIEF Specify a tuoff criteria for scores
+!END
+!PARAMETER -tversky
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Switch to Tversky similarity scoring (default = Tanimoto)
+!END
+!PARAMETER -dbase
+  !TYPE string
+  !REQUIRED true
+  !BRIEF File containing the database molecules to be searched (format not restricted to *.oeb)
+  !KEYLESS 1
+!END
+!PARAMETER -query
+  !TYPE string
+  !LIST true
+  !REQUIRED true
+  !BRIEF File containing the query molecule(s) to be searched (format not restricted to *.oeb)
+  !KEYLESS 2
+!END
+!END

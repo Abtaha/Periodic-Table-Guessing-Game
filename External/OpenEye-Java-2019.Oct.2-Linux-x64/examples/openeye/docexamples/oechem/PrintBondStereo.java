@@ -1,0 +1,57 @@
+/*
+(C) 2017 OpenEye Scientific Software Inc. All rights reserved.
+
+TERMS FOR USE OF SAMPLE CODE The software below ("Sample Code") is
+provided to current licensees or subscribers of OpenEye products or
+SaaS offerings (each a "Customer").
+Customer is hereby permitted to use, copy, and modify the Sample Code,
+subject to these terms. OpenEye claims no rights to Customer's
+modifications. Modification of Sample Code is at Customer's sole and
+exclusive risk. Sample Code may require Customer to have a then
+current license or subscription to the applicable OpenEye offering.
+THE SAMPLE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED.  OPENEYE DISCLAIMS ALL WARRANTIES, INCLUDING, BUT
+NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. In no event shall OpenEye be
+liable for any damages or liability in connection with the Sample Code
+or its use.
+*/
+//@ <SNIPPET>
+package openeye.docexamples.oechem;
+
+import openeye.oechem.*;
+
+public class PrintBondStereo {
+
+    public static void main(String argv[]) {
+
+        OEGraphMol mol = new OEGraphMol();
+        oechem.OESmilesToMol(mol, "C\\C=C\\C=C/C=CC");
+
+        for (OEBondBase bond : mol.GetBonds()) {
+            if (bond.HasStereoSpecified(OEBondStereo.CisTrans)) {
+                for (OEAtomBase atom1 : bond.GetBgn().GetAtoms()) {
+                    if (atom1.GetIdx() == bond.GetEnd().GetIdx()) {
+                        continue;
+                    }
+                    for (OEAtomBase atom2 : bond.GetEnd().GetAtoms()) {
+                        if (atom2.GetIdx() == bond.GetBgn().GetIdx()) {
+                            continue;
+                        }
+                        OEAtomBaseVector v = new OEAtomBaseVector();
+                        v.add(atom1);
+                        v.add(atom2);
+                        int stereo =  bond.GetStereo(v,OEBondStereo.CisTrans);
+                        System.out.print("Atoms: " + atom1.GetIdx() + " and " + atom2.GetIdx() + " are ");
+                        if (stereo == OEBondStereo.Cis) {
+                            System.out.println("cis");
+                        } else if (stereo == OEBondStereo.Trans) {
+                            System.out.println("trans");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//@ </SNIPPET>

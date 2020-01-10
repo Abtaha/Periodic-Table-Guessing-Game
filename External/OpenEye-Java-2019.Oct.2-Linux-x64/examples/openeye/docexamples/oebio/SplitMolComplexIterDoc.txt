@@ -1,0 +1,33 @@
+!BRIEF <molfile> [<outfile> [ligname]]
+
+!PARAMETER -i
+  !TYPE string
+  !BRIEF Input molecule (usually a pdb file)
+  !REQUIRED true
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !TYPE string
+  !DEFAULT splitmolcomplexiter.oeb.gz
+  !BRIEF Output molecule (usually an oeb)
+  !REQUIRED false
+  !KEYLESS 2
+!END
+!PARAMETER -l
+  !TYPE string
+  !BRIEF Explicit ligand name
+  !REQUIRED false
+  !KEYLESS 3
+!END
+!PARAMETER -a
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, show all binding sites, not just the first
+  !REQUIRED false
+!END
+!PARAMETER -f
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, use just the ligand filter
+  !REQUIRED false
+!END

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="oejava-2019.Oct.2-Linux-x64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/External/OpenEye-Java-2019.Oct.2-Linux-x64/lib/oejava-2019.Oct.2-Linux-x64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

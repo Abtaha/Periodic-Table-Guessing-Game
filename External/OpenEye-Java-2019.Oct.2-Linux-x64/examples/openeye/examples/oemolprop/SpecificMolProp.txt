@@ -1,0 +1,42 @@
+# specificmolprop interface file
+!BRIEF [-in] <input> [-out] <output> [-verbose] <verbose>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 1
+      !VISIBILITY simple
+      !BRIEF Input filename
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED false
+      !KEYLESS 2
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END
+
+!CATEGORY "other options :"
+
+  !PARAMETER -verbose
+    !TYPE int
+    !REQUIRED false
+    !LEGAL_RANGE 2 5
+    !DEFAULT 4
+    !VISIBILITY simple
+    !BRIEF Error level of messages 
+    !DETAIL 
+        2 is Verbose
+        3 is Info
+        4 is Warning
+        5 is Error
+  !END
+
+!END

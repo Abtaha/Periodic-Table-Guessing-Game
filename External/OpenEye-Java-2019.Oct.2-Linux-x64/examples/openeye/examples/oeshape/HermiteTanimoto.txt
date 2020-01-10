@@ -1,0 +1,39 @@
+!CATEGORY %(prog)s
+  !BRIEF %(prog)s [-inputreffile] <InputReferenceFileName> [-inputfitfile] <InputFitFileName> [-outputfile] <OutputFileName> [-NPolyMax_MAX] <NPolyMax_MAX>
+  !PARAMETER -inputreffile 1
+    !ALIAS -inref
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Input file name with reference molecule (will only read the first molecule).
+    !KEYLESS 1
+  !END
+  !PARAMETER -inputfitfile 2
+    !ALIAS -infit
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Input file name with fit molecules
+    !KEYLESS 2
+  !END
+  !PARAMETER -outputfile 3
+    !ALIAS -out
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Output file name
+    !KEYLESS 3
+  !END
+
+!END
+
+!CATEGORY "Hermite options :" 2
+
+  !PARAMETER -NPolyMax_MAX 4
+    !ALIAS -NP_MAX
+    !TYPE int
+    !REQUIRED false
+    !DEFAULT 5
+    !LEGAL_RANGE 0 30
+    !BRIEF Maximum value of the parameter of the NPolyMax parameter of the Hermite prep
+    !KEYLESS 4
+  !END
+
+!END

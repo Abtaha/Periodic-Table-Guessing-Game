@@ -1,0 +1,14 @@
+# PrepStepsDoc interface file
+
+!BRIEF PrepStepsDoc <inmol>
+
+!CATEGORY "input options :"
+   !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !BRIEF Input molecule filename (must have 3D coordinates)
+      !SIMPLE true
+      !REQUIRED true
+      !KEYLESS 1
+   !END
+!END

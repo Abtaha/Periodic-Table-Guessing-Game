@@ -1,0 +1,44 @@
+!CATEGORY %(prog)s
+  !BRIEF %(prog)s [-inputfile] <InputFileName> [-outputgrid] <OutputGridFileName> [-NPolyMax] <NPolyMax>
+  !PARAMETER -inputfile 1
+    !ALIAS -in
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Filename of the input molecule
+    !KEYLESS 1
+  !END
+
+  !PARAMETER -outputgrid 2
+  !ALIAS -out
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Filename of the output Hermite grid (needs to have .grd file extension)
+    !KEYLESS 2
+  !END
+
+!END
+
+!CATEGORY "Hermite options :" 2
+
+  !PARAMETER -NPolyMax 3
+    !ALIAS -NP
+    !TYPE int
+    !REQUIRED false
+    !DEFAULT 5
+    !LEGAL_RANGE 0 30
+    !BRIEF Resolution parameter of Hermite Prep
+    !KEYLESS 3
+  !END
+
+
+  !PARAMETER -gridspacing 4
+    !ALIAS -gs
+    !TYPE float
+    !REQUIRED false
+    !DEFAULT 1.0
+    !LEGAL_RANGE 0.01 10.0
+    !BRIEF Grid spacing of the output Hermite grid
+    !KEYLESS 4
+  !END
+
+!END

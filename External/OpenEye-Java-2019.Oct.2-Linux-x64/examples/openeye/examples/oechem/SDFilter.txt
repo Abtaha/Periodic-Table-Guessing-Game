@@ -1,0 +1,28 @@
+!BRIEF -i <input> -o <output> -tag <name> [-min <num>] [-max <num>]
+!PARAMETER -i
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Output file name
+  !KEYLESS 2
+!END
+!PARAMETER -tag
+  !TYPE string
+  !REQUIRED true
+  !BRIEF SD tag
+!END
+!PARAMETER -min
+  !TYPE double
+  !REQUIRED false
+  !BRIEF minimum value of SD tag
+!END
+!PARAMETER -max
+  !TYPE double
+  !REQUIRED false
+  !BRIEF maximum value of SD tag
+!END

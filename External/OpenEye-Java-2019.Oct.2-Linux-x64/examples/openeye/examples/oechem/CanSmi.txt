@@ -1,0 +1,29 @@
+!BRIEF [options] [-i] <input> [[-o] <output>]
+!PARAMETER -i
+  !ALIAS -in
+  !TYPE string
+  !REQUIRED true
+  !BRIEF input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !ALIAS -out
+  !TYPE string
+  !BRIEF output file name
+  !KEYLESS 2
+!END
+!PARAMETER -isomeric
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF generate isomeric smiles
+!END
+!PARAMETER -from3d
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF perceive stereo from 3D coords
+!END
+!PARAMETER -kekule
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF generate kekule form
+!END

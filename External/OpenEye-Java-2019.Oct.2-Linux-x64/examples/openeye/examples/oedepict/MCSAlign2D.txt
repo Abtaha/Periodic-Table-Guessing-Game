@@ -1,0 +1,33 @@
+# MCSAlign2D interface file
+!BRIEF [-ref] <input> [-fit] <input> [-out] <output>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -ref
+      !ALIAS -r
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 1
+      !VISIBILITY simple
+      !BRIEF Ref filename
+    !END
+
+    !PARAMETER -fit
+      !ALIAS -f
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 2
+      !VISIBILITY simple
+      !BRIEF Align filename
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 3
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END

@@ -1,0 +1,53 @@
+/*
+(C) 2017 OpenEye Scientific Software Inc. All rights reserved.
+
+TERMS FOR USE OF SAMPLE CODE The software below ("Sample Code") is
+provided to current licensees or subscribers of OpenEye products or
+SaaS offerings (each a "Customer").
+Customer is hereby permitted to use, copy, and modify the Sample Code,
+subject to these terms. OpenEye claims no rights to Customer's
+modifications. Modification of Sample Code is at Customer's sole and
+exclusive risk. Sample Code may require Customer to have a then
+current license or subscription to the applicable OpenEye offering.
+THE SAMPLE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED.  OPENEYE DISCLAIMS ALL WARRANTIES, INCLUDING, BUT
+NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. In no event shall OpenEye be
+liable for any damages or liability in connection with the Sample Code
+or its use.
+*/
+//@ <SNIPPET>
+package openeye.docexamples.oechem;
+
+import java.io.*;
+import openeye.oechem.*;
+
+public class StringIO {
+    public static void main(String argv[]) {
+        byte[] molbarraySMI = "c1cnccc1".getBytes();
+        OEGraphMol mol = new OEGraphMol();
+        readFromByteArray(molbarraySMI, mol);
+
+        byte [] molbarraySDF = writeToByteArray(mol);
+        String molstring = new String(molbarraySDF);
+        System.out.println("MOL string");
+        System.out.println(molstring);
+    }
+    private static byte [] writeToByteArray(OEMolBase mol) {
+        oemolostream ofs = new oemolostream();
+        ofs.SetFormat(OEFormat.SDF);
+        ofs.openstring();
+        oechem.OEWriteMolecule(ofs, mol);
+        byte[] ret = ofs.getByteArray();
+        ofs.close();
+        return ret;
+    }
+    private static void readFromByteArray(byte [] bArray, OEGraphMol mol) {
+        oemolistream ifs = new oemolistream();
+        ifs.SetFormat(OEFormat.SMI);
+        ifs.openByteArray(bArray);
+        oechem.OEReadMolecule(ifs, mol);
+        ifs.close();
+    }
+}
+//@ </SNIPPET>

@@ -1,0 +1,43 @@
+# SearchFastFP interface file
+!BRIEF [-query] <molfile> [-molfname] <molfile> [-fpdbfname] <fpfile>  [-out] <molfile>
+
+!CATEGORY "input/output options"
+
+  !PARAMETER -query
+    !ALIAS -q
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 1
+    !VISIBILITY simple
+    !BRIEF Input query filename
+  !END
+
+  !PARAMETER -molfname
+    !ALIAS -mol
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 2
+    !VISIBILITY simple
+    !BRIEF Input molecule filename
+  !END
+
+  !PARAMETER -fpdbfname
+    !ALIAS -fpdb
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 3
+    !VISIBILITY simple
+    !BRIEF Input fast fingerprint database filename
+  !END
+
+  !PARAMETER -out
+    !ALIAS -o
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 4
+    !VISIBILITY simple
+    !BRIEF Output molecule filename
+  !END
+
+!END
+

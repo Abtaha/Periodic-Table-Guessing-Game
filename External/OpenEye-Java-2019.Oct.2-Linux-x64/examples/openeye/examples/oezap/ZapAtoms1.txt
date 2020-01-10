@@ -1,0 +1,57 @@
+!PARAMETER -in
+  !TYPE string
+  !BRIEF Input molecule file
+  !REQUIRED true
+!END
+
+!PARAMETER -epsin
+  !TYPE float
+  !BRIEF Inner dielectric
+  !DEFAULT 1.0
+  !LEGAL_RANGE 0.0 100.0
+!END
+
+!PARAMETER -epsout
+  !TYPE float
+  !BRIEF Outer dielectric
+  !DEFAULT 80.0
+  !LEGAL_RANGE 0.0 100.0
+!END
+
+!PARAMETER -grid_spacing
+  !TYPE float
+  !DEFAULT 0.5
+  !BRIEF Spacing between grid points (Angstroms)
+  !LEGAL_RANGE 0.1 2.0
+!END
+
+!PARAMETER -boundary
+  !ALIAS bubber
+  !TYPE float
+  !DEFAULT 2.0
+  !BRIEF Extra buffer outside extents of molecule.
+  !LEGAL_RANGE 0.1 10.0
+!END
+
+!PARAMETER -file_charges
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Use partial charges from input file rather than calculating with MMFF.
+!END
+
+!PARAMETER -calc_type
+  !TYPE string
+  !DEFAULT default
+  !LEGAL_VALUE default
+  !LEGAL_VALUE solvent_only
+  !LEGAL_VALUE remove_self
+  !LEGAL_VALUE coulombic
+  !LEGAL_VALUE breakdown
+  !BRIEF Choose type of atom potentials to calculate
+!END
+
+!PARAMETER -atomtable
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Output a table of atom potentials
+!END

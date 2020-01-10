@@ -1,0 +1,60 @@
+!BRIEF [options] [-ref <mol file>] [-in <mol file>] [-out <mol file>]
+
+!CATEGORY "input/output options"
+
+  !PARAMETER -ref
+    !TYPE string
+    !REQUIRED true
+    !BRIEF input reference mol file name
+    !KEYLESS 1
+  !END
+
+  !PARAMETER -in
+    !ALIAS -i
+    !TYPE string
+    !REQUIRED true
+    !BRIEF input mol file name
+    !KEYLESS 2
+  !END
+
+  !PARAMETER -out
+    !ALIAS -o
+    !TYPE string
+    !REQUIRED false
+    !BRIEF output file name, this implies that -overlay should be true
+    !KEYLESS 3
+  !END
+
+!END
+
+!CATEGORY "options"
+
+  !PARAMETER -automorph
+    !TYPE bool
+    !DEFAULT true
+    !BRIEF assign best atom association
+    !DETAIL
+        If false, atoms are associated by order.
+        If true, graph isomorphism is determined with symmetry perception.
+  !END
+
+  !PARAMETER -overlay
+    !TYPE bool
+    !DEFAULT true
+    !BRIEF Minimize to the smallest RMSD
+  !END
+
+  !PARAMETER -heavyonly
+    !TYPE bool
+    !DEFAULT true
+    !BRIEF Ignore hydrogens for RMSD calculation
+  !END
+
+  !PARAMETER -verbose
+    !ALIAS -v
+    !TYPE bool
+    !DEFAULT false
+    !BRIEF verbose
+  !END
+
+!END

@@ -1,0 +1,27 @@
+!PARAMETER -receptor
+  !ALIAS -rec
+  !TYPE string
+  !REQUIRED true
+  !LEGAL_VALUE *.oeb
+  !LEGAL_VALUE *.oeb.gz
+  !BRIEF A receptor file the poses pass to the -in flag will be scored against
+!END
+
+!PARAMETER -in
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input molecule file with poses to rescore
+!END
+
+!PARAMETER -out
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Rescored molecules will be written to this file
+!END
+
+!PARAMETER -optimize
+  !ALIAS -opt
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Optimize molecules before rescoring
+!END

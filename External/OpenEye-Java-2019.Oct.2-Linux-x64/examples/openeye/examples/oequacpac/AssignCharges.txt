@@ -1,0 +1,40 @@
+!BRIEF [-options] <inmol> [<outmol>]
+
+!CATEGORY "input/output options :"
+   !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !BRIEF Input molecule
+      !VISIBILITY simple
+      !REQUIRED true
+      !KEYLESS 1
+   !END
+
+   !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !DEFAULT oeassigncharges.oeb.gz
+      !BRIEF Output molecule (usually an oeb)
+      !VISIBILITY simple
+      !REQUIRED false
+      !KEYLESS 2
+   !END
+!END
+
+!CATEGORY "Charging options :"
+   !PARAMETER -method
+      !TYPE string
+      !LEGAL_VALUE noop
+      !LEGAL_VALUE mmff
+      !LEGAL_VALUE mmff94
+      !LEGAL_VALUE am1bcc
+      !LEGAL_VALUE am1bccnosymspt
+      !LEGAL_VALUE amber
+      !LEGAL_VALUE amberff94
+      !LEGAL_VALUE am1bccelf10
+      !DEFAULT mmff94
+      !BRIEF which set of charges to apply
+      !SIMPLE true
+      !REQUIRED false
+   !END
+!END

@@ -1,0 +1,33 @@
+# SMARTSAlign2D interface file
+!BRIEF [-in] <input> [-smarts] <smarts> [-out] <output>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 1
+      !VISIBILITY simple
+      !BRIEF Filename of input molecules
+    !END
+
+    !PARAMETER -smarts
+      !ALIAS -s
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 2
+      !VISIBILITY simple
+      !BRIEF SMARTS for alignment match
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 3
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END

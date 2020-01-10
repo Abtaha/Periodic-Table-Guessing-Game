@@ -1,0 +1,82 @@
+!BRIEF [options] [-smirks <string> | -rxn <rfile>] -reactants <infile> [-product <outfile>]
+!CATEGORY "input/output options"
+
+  !PARAMETER -smirks
+    !ALIAS -s
+    !TYPE string
+    !VISIBILITY simple
+    !BRIEF SMIRKS reaction string
+  !END
+
+  !PARAMETER -rxn
+    !ALIAS -s
+    !TYPE string
+    !VISIBILITY simple
+    !BRIEF MDL reaction file
+  !END
+
+  !PARAMETER -reactants
+    !ALIAS -r
+    !TYPE string
+    !LIST true
+    !REQUIRED true
+    !VISIBILITY simple
+    !BRIEF list of input reactant filenames
+  !END
+
+  !PARAMETER -product
+    !ALIAS -p
+    !TYPE string
+    !REQUIRED false
+    !VISIBILITY simple
+    !BRIEF output product filename
+  !END
+!END
+
+!CATEGORY "OELibraryGen options"
+
+  !PARAMETER -relax
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF unmapped atoms on reactant side are not deleted during reaction
+  !END
+
+  !PARAMETER -implicitH
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF reaction will be perfomed using implicit hydrogens
+  !END
+
+  !PARAMETER -valence
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF automatic valence correction will be applied
+  !END
+
+!END
+
+!CATEGORY "product smiles generation options"
+
+  !PARAMETER -unique
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF only unique product canonical smiles will be written 
+  !END
+
+  !PARAMETER -isomeric
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF include atom and bond stereochemistry in product smiles string
+  !END
+
+!END

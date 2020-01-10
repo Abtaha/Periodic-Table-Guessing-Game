@@ -1,0 +1,41 @@
+!BRIEF <molfile> [<outfile>]
+
+!PARAMETER -in
+  !ALIAS -i
+  !TYPE string
+  !BRIEF Input molecule (usually a pdb file)
+  !REQUIRED true
+  !KEYLESS 1
+!END
+!PARAMETER -out
+  !ALIAS -o
+  !TYPE string
+  !DEFAULT splitmolcomplex.oeb.gz
+  !BRIEF Output molecule (usually an oeb)
+  !REQUIRED false
+  !KEYLESS 2
+!END
+!PARAMETER -a
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, show all binding sites, not just the first
+  !REQUIRED false
+!END
+!PARAMETER -c
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, split covalent ligands
+  !REQUIRED false
+!END
+!PARAMETER -s
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, separate residues before recombining (to return just binding site res)
+  !REQUIRED false
+!END
+!PARAMETER -pw
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF If true, combine protein and water into the same output mol (ignore other options)
+  !REQUIRED false
+!END

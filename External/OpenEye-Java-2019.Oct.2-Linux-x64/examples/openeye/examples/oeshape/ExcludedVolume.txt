@@ -1,0 +1,27 @@
+!CATEGORY %(prog)s
+  !BRIEF %(prog)s [-q] <query> [-e] <exclusion> [-d] <database> [-o] <output>
+  !PARAMETER -q 1
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Query file name
+    !KEYLESS 1
+  !END
+  !PARAMETER -e 2
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Protein to use as exclusion volume
+    !KEYLESS 2
+  !END
+  !PARAMETER -d 3
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Database file name
+    !KEYLESS 3
+  !END
+  !PARAMETER -o 4
+    !TYPE string
+    !REQUIRED true
+    !BRIEF Output file name
+    !KEYLESS 4
+  !END
+!END

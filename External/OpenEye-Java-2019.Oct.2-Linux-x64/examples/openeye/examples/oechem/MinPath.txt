@@ -1,0 +1,35 @@
+!BRIEF -i <input> [-o <output>] -smarts1 <smarts> -smarts2 <smarts> | -atom1 <name> -atom2 <name>
+!PARAMETER -i
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !TYPE string
+  !REQUIRED false
+  !BRIEF Output file name
+  !KEYLESS 2
+!END
+!PARAMETER -smarts1
+  !TYPE string
+  !BRIEF Smarts pattern to identify 1st atom
+!END
+!PARAMETER -smarts2
+  !TYPE string
+  !BRIEF Smarts pattern to identify 2nd atom
+!END
+!PARAMETER -atom1
+  !TYPE string
+  !BRIEF Name of 1st atom
+!END
+!PARAMETER -atom2
+  !TYPE string
+  !BRIEF Name of 2nd atom
+!END
+!PARAMETER -verbose
+  !TYPE bool
+  !REQUIRED false
+  !DEFAULT false
+  !BRIEF Print verbose output
+!END

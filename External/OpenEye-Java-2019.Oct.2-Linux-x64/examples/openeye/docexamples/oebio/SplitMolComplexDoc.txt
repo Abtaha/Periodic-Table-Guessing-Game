@@ -1,0 +1,22 @@
+!BRIEF <inmol> [<outmol>]
+
+!CATEGORY "input/output options :"
+   !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !BRIEF Input molecule (usually a pdb file)
+      !VISIBILITY simple
+      !REQUIRED true
+      !KEYLESS 1
+   !END
+
+   !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !DEFAULT splitmolcomplex.oeb.gz
+      !BRIEF Output molecule (usually an oeb)
+      !VISIBILITY simple
+      !REQUIRED false
+      !KEYLESS 2
+   !END
+!END

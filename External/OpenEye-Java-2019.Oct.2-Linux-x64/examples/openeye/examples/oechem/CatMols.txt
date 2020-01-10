@@ -1,0 +1,14 @@
+!BRIEF -i <infile1> [<infile2>...] -o <outfile>
+!PARAMETER -i
+  !ALIAS -in
+  !TYPE string
+  !LIST true
+  !REQUIRED true
+  !BRIEF input file name(s)
+!END
+!PARAMETER -o
+  !ALIAS -out
+  !TYPE string
+  !REQUIRED true
+  !BRIEF output file name
+!END

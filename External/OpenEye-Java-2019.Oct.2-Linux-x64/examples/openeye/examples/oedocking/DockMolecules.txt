@@ -1,0 +1,20 @@
+!PARAMETER -receptor
+  !ALIAS -rec
+  !TYPE string
+  !REQUIRED true
+  !LEGAL_VALUE *.oeb
+  !LEGAL_VALUE *.oeb.gz
+  !BRIEF A receptor file the molecules pass to the -in flag will be docked to
+!END
+
+!PARAMETER -in
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Multiconformer file of molecules to be docked.
+!END
+
+!PARAMETER -out
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Docked molecules will be written to this file
+!END

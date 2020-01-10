@@ -1,0 +1,33 @@
+!BRIEF [-minhac <num>] [-maxhac <num>] [-minwt <num>] [-maxwt <num>] [-i] <input> [[-o] <output>]
+!PARAMETER -i
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !TYPE string
+  !REQUIRED false
+  !BRIEF Output file name
+  !KEYLESS 2
+!END
+!PARAMETER -minhac
+  !TYPE int
+  !REQUIRED false
+  !BRIEF minimum heavy atom count
+!END
+!PARAMETER -maxhac
+  !TYPE int
+  !REQUIRED false
+  !BRIEF maximum heavy atom count
+!END
+!PARAMETER -minwt
+  !TYPE double
+  !REQUIRED false
+  !BRIEF minimum molecular weight
+!END
+!PARAMETER -maxwt
+  !TYPE double
+  !REQUIRED false
+  !BRIEF maximum molecular weight
+!END

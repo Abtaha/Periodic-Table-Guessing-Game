@@ -1,0 +1,59 @@
+.menuButton{
+    -fx-border-color: "white";
+    -fx-border-width: 1;
+    -fx-border-radius: 22;
+
+    -fx-background-radius: 20;
+    -fx-background-color: #333333;
+    -fx-text-fill: "white";
+}
+
+.menuButton:hover{
+    -fx-background-color: "white";
+    -fx-text-fill: #333333;
+}
+
+.menuButton:pressed{
+    -fx-background-color: #333333;
+    -fx-text-fill: "white";
+}
+
+.submitBtn{
+    -fx-background-color: "#FFFF33";
+    -fx-text-fill: "black";
+}
+
+.submitBtn:hover{
+    -fx-background-color: "#FFFF66";
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.answerBtn{
+    -fx-background-color: "#7CFC00";
+    -fx-text-fill: "black";
+}
+
+.answerBtn:hover{
+    -fx-background-color: "#ADFF2F";
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.genNewBtn{
+    -fx-background-color: "#FF8C00";
+    -fx-text-fill: "black";
+}
+
+.genNewBtn:hover{
+    -fx-background-color: "#FFA500";
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.quitBtn{
+    -fx-background-color: "#FF6347";
+    -fx-text-fill: "black";
+}
+
+.quitBtn:hover{
+    -fx-background-color: "#FF7F50";
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}

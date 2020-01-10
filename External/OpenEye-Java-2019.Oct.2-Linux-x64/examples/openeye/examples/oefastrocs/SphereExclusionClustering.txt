@@ -1,0 +1,30 @@
+# sphere exclusion clustering interface file
+
+!BRIEF [-shapeOnly] [-cutoff 0.75] [-dbase] <database> [-clusters] <clusters.oeb>
+
+!CATEGORY SphereExclusionClustering
+!PARAMETER -dbase
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input database to select from
+  !KEYLESS 1
+!END
+!PARAMETER -clusters
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Output to write clusters to
+  !KEYLESS 2
+!END
+!PARAMETER -shapeOnly
+  !ALIAS -s
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Run FastROCS in shape only mode.
+!END
+!PARAMETER -cutoff
+  !ALIAS -c
+  !TYPE float
+  !DEFAULT 0.75
+  !BRIEF Number of random pairs to sample.
+!END
+!END

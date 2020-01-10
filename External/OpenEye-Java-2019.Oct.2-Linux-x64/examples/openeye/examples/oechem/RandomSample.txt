@@ -1,0 +1,28 @@
+!BRIEF [-seed <int>] [-n <number>] [-p <percent>] [-i] <input> [-o] <output>
+!PARAMETER -i
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !TYPE string
+  !REQUIRED false
+  !BRIEF Output file name
+  !KEYLESS 2
+!END
+!PARAMETER -p
+  !TYPE float
+  !REQUIRED false
+  !BRIEF Percentage of output molecules
+!END
+!PARAMETER -n
+  !TYPE int
+  !REQUIRED false
+  !BRIEF Number of output molecules
+!END
+!PARAMETER -seed
+  !TYPE int
+  !REQUIRED false
+  !BRIEF Integer value for random seed, default is system time
+!END

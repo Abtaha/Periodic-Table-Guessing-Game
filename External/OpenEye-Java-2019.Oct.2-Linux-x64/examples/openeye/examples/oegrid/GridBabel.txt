@@ -1,0 +1,24 @@
+# gridbabel
+!PARAMETER -i
+  !TYPE string
+  !REQUIRED true
+  !KEYLESS 1
+  !BRIEF input filename
+!END
+!PARAMETER -o
+  !TYPE string
+  !REQUIRED true
+  !KEYLESS 2
+  !BRIEF output filename
+!END
+!PARAMETER -res
+  !TYPE float
+  !REQUIRED false
+  !DEFAULT 0.5
+  !LEGAL_RANGE 0.1 4.0
+!END
+!PARAMETER -regularize
+  !TYPE bool
+  !DEFAULT false
+  !REQUIRED false
+!END                  

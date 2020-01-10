@@ -1,0 +1,118 @@
+# nam2mol interface file
+!CATEGORY nam2mol
+
+    !CATEGORY I/O
+        !PARAMETER -in 1
+          !ALIAS -i
+          !TYPE string
+          !REQUIRED true
+          !BRIEF Input filename
+          !KEYLESS 1
+        !END
+        
+        !PARAMETER -out 2
+          !ALIAS -o
+          !TYPE string
+          !REQUIRED true
+          !BRIEF Output filename
+          !KEYLESS 2
+        !END
+    !END
+    
+    !CATEGORY Lexichem Features
+              
+        !PARAMETER -language 1
+           !ALIAS -lang
+           !TYPE string
+           !DEFAULT american
+           !LEGAL_VALUE american
+           !LEGAL_VALUE english
+           !LEGAL_VALUE us
+
+           !LEGAL_VALUE chinese
+           !LEGAL_VALUE zh
+           !LEGAL_VALUE cn
+
+           !LEGAL_VALUE danish
+           !LEGAL_VALUE dk
+           !LEGAL_VALUE da
+
+           !LEGAL_VALUE dutch
+           !LEGAL_VALUE nl
+
+           !LEGAL_VALUE french
+           !LEGAL_VALUE fr
+
+           !LEGAL_VALUE german
+           !LEGAL_VALUE de
+        
+           !LEGAL_VALUE greek
+           !LEGAL_VALUE el
+        
+           !LEGAL_VALUE hungarian
+           !LEGAL_VALUE hu
+
+           !LEGAL_VALUE irish
+           !LEGAL_VALUE ie
+           !LEGAL_VALUE ga
+
+           !LEGAL_VALUE italian
+           !LEGAL_VALUE it
+
+           !LEGAL_VALUE japanese
+           !LEGAL_VALUE jp
+           !LEGAL_VALUE ja
+
+           !LEGAL_VALUE polish
+           !LEGAL_VALUE pl
+
+           !LEGAL_VALUE portuguese
+           !LEGAL_VALUE pt
+
+           !LEGAL_VALUE romanian
+           !LEGAL_VALUE ro
+
+           !LEGAL_VALUE russian
+           !LEGAL_VALUE ru
+
+           !LEGAL_VALUE slovak
+           !LEGAL_VALUE sk
+
+           !LEGAL_VALUE spanish
+           !LEGAL_VALUE es
+
+           !LEGAL_VALUE swedish
+           !LEGAL_VALUE se
+           !LEGAL_VALUE sv
+
+           !LEGAL_VALUE welsh
+           !LEGAL_VALUE cy
+           
+           !REQUIRED false
+           !BRIEF Language for input names.
+       !END     
+
+        !PARAMETER -tag 3
+           !TYPE string
+           !REQUIRED false
+           !BRIEF Set name as SD data with tag
+        !END
+
+        !PARAMETER -empty 4
+           !TYPE bool
+           !DEFAULT false
+           !BRIEF Output an empty molecule for unparseable names
+        !END
+
+        !PARAMETER -charset 5
+           !ALIAS -encoding
+           !TYPE string
+           !REQUIRED false
+           !BRIEF Choose charset/encoding for input names.
+           !LEGAL_VALUE default
+           !LEGAL_VALUE ascii
+           !LEGAL_VALUE utf8
+           !LEGAL_VALUE html
+        !END
+    !END
+!END

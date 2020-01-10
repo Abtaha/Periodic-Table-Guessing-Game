@@ -1,0 +1,21 @@
+!BRIEF [-shapeOnly] [-dbase] <database> [-matrix] <clusters.csv>
+!CATEGORY ShapeDistanceMatrix
+!PARAMETER -dbase
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Input database to select from
+  !KEYLESS 1
+!END
+!PARAMETER -matrix
+  !TYPE string
+  !REQUIRED true
+  !BRIEF csv file to write similarity matrix to
+  !KEYLESS 2
+!END
+!PARAMETER -shapeOnly
+  !ALIAS -s
+  !TYPE bool
+  !DEFAULT false
+  !BRIEF Run FastROCS in shape only mode.
+!END
+!END

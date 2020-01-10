@@ -1,0 +1,24 @@
+# Mols2Img interface file
+!BRIEF -in <input1> [ <input2> .. ] -out <output image>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !LIST true
+      !REQUIRED true
+      !VISIBILITY simple
+      !BRIEF Input filename(s)
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED true
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END
+

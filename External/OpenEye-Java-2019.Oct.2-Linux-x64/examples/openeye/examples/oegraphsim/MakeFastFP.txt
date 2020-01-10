@@ -1,0 +1,24 @@
+# makefastfp interface file
+!BRIEF [-in] <input> [-fpdbfname] <output>
+
+!CATEGORY "input/output options"
+
+  !PARAMETER -in
+    !ALIAS -i
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 1
+    !VISIBILITY simple
+    !BRIEF Input molecule filename
+  !END
+
+  !PARAMETER -fpdbfname
+    !ALIAS -fpdb
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 2
+    !VISIBILITY simple
+    !BRIEF Output fingerprint database filename
+  !END
+
+!END

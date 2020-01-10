@@ -1,0 +1,24 @@
+# BFactor2Img interface file
+!BRIEF [-complex] <input> [-out] <output image>
+
+!CATEGORY "input/output options :"
+
+  !PARAMETER -complex
+    !ALIAS -c
+    !TYPE string
+    !KEYLESS 1
+    !REQUIRED true
+    !VISIBILITY simple
+    !BRIEF Input filename of the protein complex
+  !END
+
+  !PARAMETER -out
+    !ALIAS -o
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 2
+    !VISIBILITY simple
+    !BRIEF Output filename
+  !END
+
+!END

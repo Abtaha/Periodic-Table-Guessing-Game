@@ -1,0 +1,53 @@
+# Begin the definition of the -receptor command line parameter.
+!PARAMETER -receptors
+
+  # allows the use of -rec on the command as a shortcut for -receptors
+  !ALIAS -rec
+
+  # Parameter is a of type string
+  !TYPE string
+
+  # parameter can support multiple receptors ala
+  #  -receptors *.oeb.gz
+  !LIST true
+
+  # Tells the OEParseCommandLine function to throw an error if this 
+  # parameter isn't specified on the command line
+  !REQUIRED true
+
+  # Specifies that only strings ending in .oeb or .oeb.gz are legal
+  # setting for this parameter (OEParseCommandLine will throw and error)
+  !LEGAL_VALUE *.oeb
+  !LEGAL_VALUE *.oeb.gz 
+
+  # Description of the parameter (accessable by the users via --help command)
+  !BRIEF A receptor file the molecules pass to the -in flag will be posed to
+
+# End the definition of -receptor parameter
+!END
+
+
+# Begin definition of -in command line parameter
+!PARAMETER -in
+
+  # Parameter is of type string
+  !TYPE string
+
+  # Parameter must be specified on the command line or OEParseCommandLine
+  # function will throw and error.
+  !REQUIRED true
+
+  # Description of the parameter (accessable by the users via --help command)
+  !BRIEF Multiconformer file of molecules to be posed.
+
+# End of the definition of -in
+!END
+
+
+!PARAMETER -out
+  !TYPE string
+  !REQUIRED true
+  !BRIEF Posed molecules will be written to this file
+!END
+
+

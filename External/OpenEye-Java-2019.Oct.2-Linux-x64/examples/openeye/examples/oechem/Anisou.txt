@@ -1,0 +1,23 @@
+!BRIEF [-v] [-i] <mol file>
+
+!CATEGORY "input options"
+
+  !PARAMETER -input
+    !ALIAS -i
+    !TYPE string
+    !REQUIRED true
+    !BRIEF input mol file name
+    !KEYLESS 1
+  !END
+!END
+
+!CATEGORY "options"
+
+  !PARAMETER -verbose
+    !ALIAS -v
+    !TYPE bool
+    !DEFAULT false
+    !BRIEF verbose
+  !END
+
+!END

@@ -1,0 +1,20 @@
+!BRIEF [-exo] [-i] <infile> [[-o] <outfile>]
+!PARAMETER -i
+  !ALIAS -in
+  !TYPE string
+  !REQUIRED true
+  !BRIEF input file name
+  !KEYLESS 1
+!END
+!PARAMETER -o
+  !ALIAS -out
+  !TYPE string
+  !REQUIRED false
+  !BRIEF output file name
+  !KEYLESS 2
+!END
+!PARAMETER -exo
+  !TYPE bool
+  !DEFAULT true
+  !BRIEF Include non-ring atoms double bonded to a ring
+!END

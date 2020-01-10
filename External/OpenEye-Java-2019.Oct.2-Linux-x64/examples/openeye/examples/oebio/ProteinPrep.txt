@@ -1,0 +1,119 @@
+# proteinprep interface file
+
+!BRIEF <inmol> [<outcplx> [<outlig>]]
+
+!CATEGORY "input/output options :" 1
+   !PARAMETER -in 1
+      !ALIAS -i
+      !TYPE string
+      !BRIEF Input molecule filename (must have 3D coordinates)
+      !SIMPLE true
+      !REQUIRED true
+      !KEYLESS 1
+   !END
+
+   !PARAMETER -cplxout 2
+      !ALIAS -p
+      !TYPE string
+      !DEFAULT proteinprep.oeb.gz
+      !BRIEF Output complex filename
+      !SIMPLE true
+      !REQUIRED false
+      !KEYLESS 2
+   !END
+
+   !PARAMETER -ligout 3
+      !ALIAS -l
+      !TYPE string
+      !BRIEF Output ligand filename
+      !SIMPLE true
+      !REQUIRED false
+      !KEYLESS 3
+   !END
+!END
+
+!CATEGORY "Calculation options :" 2
+    !PARAMETER -alts 1
+       !TYPE string
+       !LEGAL_VALUE occupancy
+       !LEGAL_VALUE a
+       !LEGAL_VALUE ignore
+       !LEGAL_VALUE compare
+       !DEFAULT occupancy
+       !BRIEF Alternate location atom handling (affects atom:atom interactions)
+       !SIMPLE true
+       !REQUIRED false
+       !DETAIL
+         occupancy - keep just the highest average occupancy for each alt group
+         a - keep only loc code A (and blank)
+         ignore - assume alts already selected appropriately
+         compare - keep all alts but only interact if same loc code (or blank)
+    !END
+
+    !PARAMETER -placehydrogens 2
+       !TYPE bool
+       !DEFAULT true
+       !BRIEF If false, hydrogens will not be added
+       !SIMPLE true
+       !REQUIRED false
+    !END
+
+    !PARAMETER -waterprocessing 3
+       !TYPE string
+       !LEGAL_VALUE ignore
+       !LEGAL_VALUE focused
+       !LEGAL_VALUE fullsearch
+       !DEFAULT fullsearch
+       !BRIEF How waters are processed
+       !SIMPLE true
+       !REQUIRED false
+       !DETAIL
+         ignore - leave water hydrogens in a random orientation
+         focused - search orientations based on neighboring polar groups
+         fullsearch - do an extensive search of water orientations
+    !END
+
+    !PARAMETER -standardizehyd 4
+       !ALIAS -stdhyd
+       !TYPE bool
+       !DEFAULT true
+       !BRIEF If false, bonds for hydrogens are not adjusted to standard lengths
+       !SIMPLE false
+       !REQUIRED false
+    !END
+
+    !PARAMETER -clashcutoff 5
+        !TYPE double
+        !DEFAULT 0.4
+        !BRIEF Van der Waals overlap (in Angstroms) defined to be a bad clash
+        !SIMPLE false
+        !REQUIRED false
+    !END
+
+    !PARAMETER -flipbias 6
+        !TYPE double
+        !DEFAULT 1.0
+        !BRIEF Scale factor for the bias against flipping sidechains such as HIS
+        !SIMPLE false
+        !REQUIRED false
+    !END
+
+    !PARAMETER -maxsubstates 7
+        !TYPE double
+        !DEFAULT 1.0e8
+        !BRIEF Maximum number of substates in a single step of hydrogen placement optimization
+        !SIMPLE false
+        !REQUIRED false
+    !END
+!END
+
+!CATEGORY "Display options :" 9
+   !PARAMETER -verbose 1
+      !ALIAS -v
+      !TYPE bool
+      !DEFAULT false
+      !BRIEF Display more information about the process
+      !SIMPLE true
+      !REQUIRED false
+   !END
+!END

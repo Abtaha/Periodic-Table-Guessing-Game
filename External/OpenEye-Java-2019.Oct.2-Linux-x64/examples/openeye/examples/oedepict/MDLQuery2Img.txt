@@ -1,0 +1,24 @@
+# MDLQuery2Img interface file
+!BRIEF [-in] <input> [-out] <output image>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 1
+      !VISIBILITY simple
+      !BRIEF Input filename
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 2
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END

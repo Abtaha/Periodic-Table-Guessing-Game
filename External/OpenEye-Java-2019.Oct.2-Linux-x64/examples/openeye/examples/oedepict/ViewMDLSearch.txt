@@ -1,0 +1,45 @@
+# ViewMDLSearch interface file
+!BRIEF [-query] <input> [-target] <input> [-out] <output multipage image> [-align]
+
+!CATEGORY "input/output options :"
+
+  !PARAMETER -query
+    !ALIAS -q
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 1
+    !VISIBILITY simple
+    !BRIEF Input query filename
+  !END
+
+  !PARAMETER -target
+    !ALIAS -t
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 2
+    !VISIBILITY simple
+    !BRIEF Input target filename
+  !END
+
+  !PARAMETER -out
+    !ALIAS -o
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 3
+    !VISIBILITY simple
+    !BRIEF Output image filename
+  !END
+
+!END
+
+!CATEGORY "general options :"
+
+  !PARAMETER -align
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF Align hits to query
+  !END
+
+!END

@@ -1,0 +1,20 @@
+!BRIEF [options] -ref <refmol> -fit <fitmol> -out <imagefile>
+!CATEGORY file options
+    !PARAMETER -ref
+      !ALIAS -refmol
+      !TYPE string
+      !REQUIRED true
+      !BRIEF ref mol file name
+    !END
+    !PARAMETER -fit
+      !ALIAS -fitmol
+      !TYPE string
+      !REQUIRED true
+      !BRIEF fit mol file name
+    !END
+    !PARAMETER -out
+      !TYPE string
+      !REQUIRED true
+      !BRIEF output image filename
+    !END
+!END

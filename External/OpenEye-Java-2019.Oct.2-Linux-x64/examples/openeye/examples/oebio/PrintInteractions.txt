@@ -1,0 +1,15 @@
+# PrintInteractions interface file
+!BRIEF [-complex] <input>
+
+!CATEGORY "input/output options :"
+
+  !PARAMETER -complex
+    !ALIAS -c
+    !TYPE string
+    !KEYLESS 1
+    !REQUIRED true
+    !VISIBILITY simple
+    !BRIEF Input filename of the protein complex
+  !END
+
+!END

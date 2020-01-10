@@ -1,0 +1,70 @@
+<project name="oejava" default="jar" basedir=".">
+    <description> OpenEye Java build file </description>
+
+  <!--
+  CONFIDENTIAL. (C) 2017 OpenEye Scientific Software Inc.
+  All rights reserved.
+  ALL SOFTWARE BELOW IS PROPRIETARY AND CONFIDENTIAL TO OPENEYE
+  SCIENTIFIC SOFTWARE INC., AND IS SUBJECT TO THE FULL PROTECTION OF
+  COPYRIGHT AND TRADESECRET LAW.
+  Copying or modifying this software is strictly prohibited and illegal.
+  Using this software without a valid license from OpenEye is strictly
+  prohibited and illegal.  De-obfuscating, de-minimizing, or any other
+  attempt to reverse engineer or discover the workings of this software,
+  is strictly prohibited. Even if software is exposed or visible, it is
+  still proprietary and confidential and the above prohibitions apply.
+  This software is NOT "Sample Code". For purposes of customization or
+  interoperation with other software you must use Sample Code
+  specifically labeled as such.
+  Please contact OpenEye at eyesopen.com/legal if you have any questions
+  about this warning.
+  -->
+
+  <!-- set global properties for this build -->
+  <property name="src" location="openeye" />
+
+  <target name="prepare">
+      <mkdir dir="build"/>
+  </target>
+
+  <!-- EXAMPLES -->
+  <target name="compile" depends="prepare"> 
+    <javac destdir="build" srcdir="${src}" includeantruntime="false"> 
+      <compilerarg line="-Xlint:unchecked -Xlint:deprecation"/>
+      <include name="**/*.java"/>
+      <classpath>
+        <pathelement path="${basedir}"/>
+          <fileset dir="${basedir}/../lib">
+            <include name="oejava-*.jar"/>
+        </fileset>
+        <pathelement location="build"/>
+      </classpath>
+    </javac> 
+  </target>
+
+  <target name="copy" depends="compile">
+      <copy todir="build/openeye">
+          <fileset dir="${src}">
+              <include name="**/*.txt"/>
+          </fileset>
+      </copy>
+  </target>
+
+  <target name="jar" depends="copy">
+    <jar jarfile="openeye.examples.jar">
+         <fileset dir="build">
+            <include name="openeye/examples/*/*.class" />
+            <include name="openeye/examples/*/*.txt" />
+            <include name="openeye/docexamples/*/*.class" />
+            <include name="openeye/docexamples/*/*.txt" />
+         </fileset>
+    </jar>
+  </target>
+
+  <!-- CLEAN -->
+  <target name="clean">
+    <delete file="openeye.examples.jar"/>
+    <delete dir="build" />
+  </target>
+
+</project>

@@ -1,0 +1,36 @@
+# CreateRingDict interface file
+!BRIEF [-in] <input> [-ringdict] <output ringdict>
+
+!CATEGORY "input/output options :"
+
+  !PARAMETER -in
+    !ALIAS -i
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 1
+    !VISIBILITY simple
+    !BRIEF Input 2D molecule filename
+  !END
+
+  !PARAMETER -ringdict
+    !ALIAS -rd
+    !TYPE string
+    !REQUIRED true
+    !KEYLESS 2
+    !VISIBILITY simple
+    !BRIEF Output ring dictionary OEB filename
+  !END
+
+!END
+
+!CATEGORY "ring dictionary options :"
+
+  !PARAMETER -retain-built-in
+    !TYPE bool
+    !REQUIRED false
+    !DEFAULT false
+    !VISIBILITY simple
+    !BRIEF Ignore ring template if built-in exists
+  !END
+
+!END

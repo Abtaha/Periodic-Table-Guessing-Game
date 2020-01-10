@@ -1,0 +1,32 @@
+# Match2Img interface file
+!BRIEF [-in] <input> [-smarts] <smarts> [-out] <output image>
+
+!CATEGORY "input/output options :"
+
+    !PARAMETER -in
+      !ALIAS -i
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 1
+      !VISIBILITY simple
+      !BRIEF Input filename
+    !END
+
+    !PARAMETER -smarts
+      !TYPE string
+      !REQUIRED true
+       !KEYLESS 2
+      !VISIBILITY simple
+      !BRIEF SMARTS pattern
+    !END
+
+    !PARAMETER -out
+      !ALIAS -o
+      !TYPE string
+      !REQUIRED true
+      !KEYLESS 3
+      !VISIBILITY simple
+      !BRIEF Output filename
+    !END
+
+!END
